@@ -3,7 +3,7 @@ agent any
 stages {
 stage ('Checkout') {
 steps {
-git branch:'main', url: 'https://github.com/momorine123/3X03-Jenkins-QA.git'
+git branch:'main', url: 'https://github.com/momorine123/ICT3X03-Ventura.git'
 }
 }
 stage('Code Quality Check via SonarQube') {
