@@ -1,0 +1,24 @@
+pipeline {
+agent any
+stages {
+stage ('Checkout') {
+steps {
+git branch:'main', url: 'https://github.com/momorine123/3X03-Jenkins-QA.git'
+}
+}
+stage('Code Quality Check via SonarQube') {
+steps {
+script {
+def scannerHome = tool 'SonarQube';
+withSonarQubeEnv('SonarQube') {
+sh "${scannerHome}/bin/sonar-scanner \
+   -Dsonar.projectKey=OWASP \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=http://192.168.1.133:9000 \
+  -Dsonar.login=sqp_903300f6ff1cef93e25128c04fc903a0d5aa8360"
+}
+}
+}
+}
+}
+}
