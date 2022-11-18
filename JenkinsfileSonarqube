@@ -15,7 +15,7 @@ sh "${scannerHome}/bin/sonar-scanner \
    -Dsonar.projectKey=OWASP \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://192.168.1.133:9000 \
-  -Dsonar.login=sqp_903300f6ff1cef93e25128c04fc903a0d5aa8360"
+  -Dsonar.login=sqp_82a83af9c2dcee068b6653239c3ddae458aa110b"
 }
 }
 }
